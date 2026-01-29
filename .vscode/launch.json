@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run COBOL Program",
+      "type": "shell",
+      "command": "cobc -x age_eligibility_check.cbl && ./age_eligibility_check.exe",
+      "options": {
+        "shell": {
+          "executable": "C:\\msys64\\mingw64.exe",
+          "args": ["-defterm", "-here", "-c"]
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared"
+      }
+    }
+],
+"configurations": [
+
+]
+}
