@@ -1,0 +1,21 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. ACCOUNT-TYPE.
+
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01 CODE PIC X.
+
+PROCEDURE DIVISION.
+    DISPLAY "ENTER ACCOUNT TYPE CODE: ".
+    ACCEPT CODE.
+
+    EVALUATE CODE
+        WHEN 'S'
+            DISPLAY "Savings Account"
+        WHEN 'C'
+            DISPLAY "Current Account"
+        WHEN OTHER
+            DISPLAY "Invalid Account Type"
+    END-EVALUATE.
+
+    STOP RUN.
