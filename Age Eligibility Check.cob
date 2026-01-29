@@ -1,0 +1,20 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. AGE-ELIGIBILITY.
+
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01 AGE        PIC 9(2).
+01 MIN-AGE    PIC 9(2) VALUE 18.
+
+PROCEDURE DIVISION.
+    
+    ACCEPT AGE.
+    DISPLAY "ENTER AGE: "  AGE.
+    
+    IF AGE >= MIN-AGE
+        DISPLAY "Customer is eligible"
+    ELSE
+        DISPLAY "Customer is not eligible"
+    END-IF.
+
+    STOP RUN.
